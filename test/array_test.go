@@ -41,3 +41,28 @@ func TestArray(test *testing.T) {
 	fmt.Println("e1:", e1)
 
 }
+
+//数组参数
+func TestArrayFunc(test *testing.T) {
+	a1 := &[7]int{2, 7, 7, 7, 54, 3, 2}
+	fmt.Println(a1)
+	//传递地址
+	PrintArray2(a1)
+	fmt.Println(a1)
+
+	b1 := [7]int{7, 8, 9, 0, 8, 76, 2}
+	fmt.Println("b1:", b1)
+	//传递值
+	PrintArray1(b1)
+	fmt.Println("b1:", b1)
+}
+
+//传递数组指针
+func PrintArray2(a *[7]int) {
+	a[0] = 99
+}
+
+//传递值
+func PrintArray1(a [7]int) {
+	a[0] = 99
+}
