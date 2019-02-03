@@ -17,5 +17,6 @@ func jiujiu(n int, w http.ResponseWriter) {
 		return
 	}
 	fmt.Fprintln(w)
+	//递归
 	jiujiu(n+1, w)
 }
