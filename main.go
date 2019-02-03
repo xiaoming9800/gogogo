@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gogogo/go01"
 	"log"
 	"net/http"
 )
@@ -9,6 +10,7 @@ import (
 func main() {
 	http.HandleFunc("/", HelloWorld)
 	http.HandleFunc("/sayHi", SayHi)
+	http.HandleFunc("/jiujiu", go01.JiujiuBiao)
 	er := http.ListenAndServe(":8080", nil)
 	if er != nil {
 		log.Fatal("ListenAndServe", er)
